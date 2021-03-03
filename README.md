@@ -1,2 +1,0 @@
-# safecar
-safecar android application 
