@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -72,6 +73,7 @@ public class Updatedriver extends AppCompatActivity {
             public void onClick(View view) {
                 did = dtid.getText().toString();
                 deletedriver2(did);
+                Toast.makeText(Updatedriver.this, "Driver deleted succesfully ", Toast.LENGTH_LONG).show();
 
                 Intent r = new Intent(Updatedriver.this, Home.class);
                 startActivity(r);
@@ -165,6 +167,10 @@ public class Updatedriver extends AppCompatActivity {
 
                 updatedriver2(did,dname, daddress, dage, dgender, dcharge, dbadge, dlocation, dyoe,dphno,demail,uid, newentryimg);
 
+                Toast.makeText(Updatedriver.this, "Driver updated succesfully ", Toast.LENGTH_LONG).show();
+                Intent r = new Intent(Updatedriver.this, Home.class);
+                startActivity(r);
+                finish();
             }
 
             private void updatedriver2(String did,String dname, String daddress, String dage, String

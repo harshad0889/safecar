@@ -30,4 +30,11 @@ public class delcbook extends AppCompatActivity {
         cid1.setText(carid);
         carname1.setText(cname);
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent in = new Intent(getApplicationContext(), Home.class);
+        startActivity(in);
+        finish();
+    }
 }

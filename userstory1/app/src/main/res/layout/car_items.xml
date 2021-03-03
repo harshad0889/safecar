@@ -41,7 +41,7 @@
 
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:drawableLeft="@drawable/dollar"
+        android:drawableLeft="@drawable/rupees"
         android:textSize="20sp"
         android:elevation="5dp"
         />

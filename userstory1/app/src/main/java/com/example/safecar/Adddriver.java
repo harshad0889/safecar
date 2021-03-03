@@ -90,7 +90,7 @@ public class Adddriver extends AppCompatActivity {
         setSupportActionBar(tb);
         ActionBar actionBar = getSupportActionBar();
         // actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("ADD CAR");
+        actionBar.setTitle("ADD DRIVER");
 
 
         lvcity = findViewById(R.id.lvcity);
@@ -157,6 +157,16 @@ public class Adddriver extends AppCompatActivity {
                     }
                 },myear,mmonth,mdate);
                 datePickerDialog.show();
+            }
+        });
+
+        driverreset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent in = new Intent(getApplicationContext(), Adddriver.class);
+                startActivity(in);
+
             }
         });
 

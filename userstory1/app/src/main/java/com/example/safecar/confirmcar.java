@@ -1,5 +1,6 @@
 package com.example.safecar;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -17,6 +18,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -33,6 +35,7 @@ public class confirmcar extends AppCompatActivity {
     DatabaseHelper db;
     String  username,spickloc,sdroploc,spdate,sddate,uid,scid,csname,usid;
     SharedPreferences sd;
+    Toolbar tb;
 
 
     @Override
@@ -43,6 +46,12 @@ public class confirmcar extends AppCompatActivity {
         sd = getSharedPreferences("user_details",MODE_PRIVATE);
         uid = sd.getString("uid",null);
         username  = sd.getString("username",null);
+
+        tb = findViewById(R.id.appbar);
+        setSupportActionBar(tb);
+        ActionBar actionBar = getSupportActionBar();
+        // actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("RENT CAR");
 
         db = new DatabaseHelper(this);
         carid=findViewById(R.id.carid);

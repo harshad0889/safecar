@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -63,6 +64,7 @@ public class Updatecar extends AppCompatActivity {
             public void onClick(View view) {
                 cid = ctid.getText().toString();
                 deletecar2(cid);
+                Toast.makeText(Updatecar.this, "Driver deleted succesfully ", Toast.LENGTH_LONG).show();
 
                 Intent r = new Intent(Updatecar.this, Home.class);
                 startActivity(r);
@@ -136,7 +138,7 @@ public class Updatecar extends AppCompatActivity {
                 byte[] newentryimg = imageViewToByte(civ);
 
                 updatecar2(cid,cbrand, cmodel, camount, cagency, ckms, cphone, cloc, cemail,uid, newentryimg);
-
+                Toast.makeText(Updatecar.this, "car updated succesfully ", Toast.LENGTH_LONG).show();
                 Intent r = new Intent(Updatecar.this, Home.class);
                 startActivity(r);
                 finish();

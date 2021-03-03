@@ -21,11 +21,14 @@
             android:layout_alignParentEnd="true"
             android:layout_marginStart="20dp"
             android:elevation="5dp"
+            android:ems="8"
+            android:padding="5dp"
             android:layout_marginTop="110dp"
             android:layout_marginEnd="25dp"
             android:layout_marginRight="25dp"
             android:background="@drawable/btn"
             android:hint="       Preferred Area"
+            android:drawableLeft="@drawable/location"
             android:focusable="false"/>
 
         <ImageView
@@ -37,7 +40,8 @@
             android:elevation="5dp"
             android:layout_marginTop="110dp"
             android:layout_marginEnd="30dp"
-            android:src="@drawable/location" />
+            android:src="@drawable/location"
+            android:visibility="gone"/>
 
 
         <EditText

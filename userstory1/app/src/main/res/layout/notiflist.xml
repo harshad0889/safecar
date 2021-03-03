@@ -8,9 +8,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="35dp"
 
         android:layout_marginTop="45dp"
+        android:fontFamily="sans-serif-condensed-medium"
 
         android:text="User"
         android:textAlignment="center"
@@ -22,13 +23,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginStart="115dp"
+        android:layout_marginStart="30dp"
+
+        android:layout_marginTop="18dp"
+        android:fontFamily="sans-serif-condensed-medium"
+
+        android:text="USER"
+        android:textAlignment="center"
+        android:textColor="#7C7777"
+        android:textSize="18sp" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="233dp"
+
+        android:layout_marginTop="18dp"
+        android:fontFamily="sans-serif-condensed-medium"
+
+        android:text="CAR"
+        android:textAlignment="center"
+        android:textColor="#7C7777"
+        android:textSize="18sp" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="155dp"
 
         android:layout_marginTop="45dp"
 
         android:text="rented"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="#4158D3"
         android:textSize="18sp" />
 
     <TextView
@@ -56,11 +85,12 @@
 
         android:layout_marginTop="45dp"
 
-        android:layout_marginStart="193dp"
+        android:layout_marginStart="233dp"
         android:layout_marginRight="-110dp"
         android:text="carname"
         android:textAlignment="center"
         android:textColor="#101010"
+        android:fontFamily="sans-serif-condensed-medium"
         android:textSize="20sp"
         android:drawableLeft="@drawable/carvector"/>
 
@@ -72,13 +102,13 @@
 
         android:layout_marginStart="243dp"
 
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="155dp"
         android:layout_marginRight="-110dp"
-        android:text="time"
+        android:drawableLeft="@drawable/time"
 
+        android:text="time"
         android:textColor="#979494"
-        android:textSize="15sp"
-        android:drawableLeft="@drawable/time"/>
+        android:textSize="15sp" />
 
     <TextView
     android:id="@+id/locpick"
@@ -122,7 +152,7 @@
         android:text="locdrop"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/datepic"
@@ -136,7 +166,7 @@
         android:text="datepick"
 
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:drawableLeft="@drawable/cal"/>
 
 
@@ -166,7 +196,7 @@
         android:text="datedrop"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:drawableLeft="@drawable/cal"/>
     <TextView
         android:id="@+id/carid3"
@@ -177,6 +207,7 @@
         android:layout_marginTop="3dp"
         android:layout_marginRight="28dp"
         android:hint="carid"
+        android:visibility="gone"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"

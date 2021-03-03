@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -52,7 +53,8 @@ public class bookedcars extends AppCompatActivity {
         setSupportActionBar(tb);
         ActionBar actionBar = getSupportActionBar();
        // actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("bookings");
+        actionBar.setTitle("MY CAR BOOKINGS");
+
 
         adapter = new SimpleCursorAdapter(this,R.layout.cbooklist, cursor, from, to,0);
         adapter.notifyDataSetChanged();
@@ -77,5 +79,12 @@ public class bookedcars extends AppCompatActivity {
 
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent in = new Intent(getApplicationContext(), Home.class);
+        startActivity(in);
+        finish();
     }
 }

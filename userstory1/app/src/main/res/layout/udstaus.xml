@@ -6,37 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".udstaus">
 
+    <TextView
 
+        android:hint="ID"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="35dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="14sp"/>
+    <TextView
+
+        android:hint="DRIVER"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="215dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="14sp"/>
     <TextView
         android:id="@+id/did"
         android:hint="did"
         android:layout_width="150dp"
         android:layout_height="30dp"
-        android:layout_marginTop="50dp"
+       android:ems="8"
+        android:padding="5dp"
+        android:layout_marginTop="100dp"
         android:layout_marginStart="35dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/btn"
         android:textSize="16sp"/>
     <TextView
         android:id="@+id/dname"
+        android:drawableLeft="@drawable/person2"
         android:hint="dname"
         android:layout_width="150dp"
         android:layout_height="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center_vertical"
         android:layout_marginStart="215dp"/>
+
     <TextView
         android:id="@+id/dstatus"
-        android:hint="status"
         android:layout_width="150dp"
         android:layout_height="30dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginStart="65dp"/>
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="190dp"
+        android:background="@drawable/btn"
+        android:ems="8"
+        android:hint=" choose status.."
+        android:padding="5dp" />
+
     <Button
         android:id="@+id/update"
         android:layout_width="150dp"
+        android:background="@drawable/joinbtn"
         android:layout_height="40dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="195dp"
+        android:layout_marginTop="245dp"
         android:text="update">
 
+
     </Button>
+    <include layout="@layout/appbar"/>
 
 </RelativeLayout>

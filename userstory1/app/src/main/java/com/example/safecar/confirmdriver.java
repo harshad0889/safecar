@@ -1,6 +1,8 @@
 package com.example.safecar;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -29,6 +31,7 @@ public class confirmdriver extends AppCompatActivity {
     String  username,spickloc,sdroploc,spdate,sddate,usid,scid,drivername,uid;
     DatabaseHelper db;
     SharedPreferences sp;
+    Toolbar tb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,12 @@ public class confirmdriver extends AppCompatActivity {
         sp = getSharedPreferences("user_details",MODE_PRIVATE);
         uid = sp.getString("uid",null);
         username  = sp.getString("username",null);
+
+        tb = findViewById(R.id.appbar);
+        setSupportActionBar(tb);
+        ActionBar actionBar = getSupportActionBar();
+        // actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("RENT DRIVER");
 
         ddatepick = findViewById(R.id.ddatepick);
         dpickloc = findViewById(R.id.dpickloc);

@@ -35,4 +35,11 @@ public class deldbook extends AppCompatActivity {
         did.setText(drivid);
         dname.setText(drivname);
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent in = new Intent(getApplicationContext(), Home.class);
+        startActivity(in);
+        finish();
+    }
 }

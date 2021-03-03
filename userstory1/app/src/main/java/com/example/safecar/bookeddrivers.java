@@ -1,6 +1,8 @@
 package com.example.safecar;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,6 +20,7 @@ public class bookeddrivers extends AppCompatActivity {
     SharedPreferences cu;
     String dnuid,username;
     TextView driverid1,drivername1;
+    Toolbar tb;
 
     private ListView listView;
     private SimpleCursorAdapter adapter;
@@ -36,6 +39,11 @@ public class bookeddrivers extends AppCompatActivity {
         cu = getSharedPreferences("user_details",MODE_PRIVATE);
         dnuid = cu.getString("uid",null);
         username = cu.getString("username", null);
+        tb = findViewById(R.id.appbar);
+        setSupportActionBar(tb);
+        ActionBar actionBar = getSupportActionBar();
+        // actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("MY DRIVER BOOKINGS");
 
         db = new DatabaseHelper(this);
         Cursor cursor = db.dellist2(dnuid);
@@ -66,5 +74,12 @@ public class bookeddrivers extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent in = new Intent(getApplicationContext(), Home.class);
+        startActivity(in);
+        finish();
     }
 }

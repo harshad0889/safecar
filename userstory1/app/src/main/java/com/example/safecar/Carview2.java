@@ -1,6 +1,8 @@
 package com.example.safecar;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,6 +20,7 @@ public class Carview2 extends AppCompatActivity {
     DatabaseHelper db;
     SharedPreferences cu;
     String cuid;
+    Toolbar tb;
 
     private ListView listView;
     private SimpleCursorAdapter adapter;
@@ -35,6 +38,12 @@ public class Carview2 extends AppCompatActivity {
 
         cu = getSharedPreferences("user_details",MODE_PRIVATE);
         cuid = cu.getString("uid",null);
+
+        tb = findViewById(R.id.appbar);
+        setSupportActionBar(tb);
+        ActionBar actionBar = getSupportActionBar();
+        // actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("UPDATE CAR");
 
         db = new DatabaseHelper(this);
         Cursor cursor = db.carlist(cuid);

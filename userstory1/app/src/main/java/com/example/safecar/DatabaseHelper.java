@@ -91,6 +91,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_carid = "rcid";
     public static final String COL_user = "user";
     public static final String COL_creview = "creview";
+    public static final String COL_rtime = "rtime";
 
 
     //table driver review
@@ -100,6 +101,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_driverid = "rdid";
     public static final String COL_duser = "user";
     public static final String COL_dreview = "dreview";
+    public static final String COL_drtime = "dtime";
 
 
 
@@ -193,6 +195,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + COL_rid + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + COL_carid + " TEXT,"
             + COL_user + " TEXT,"
+            + COL_rtime + " date default CURRENT_TIMESTAMP, "
             + COL_creview + " TEXT" + ")";
 
 
@@ -202,13 +205,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + COL_rdid + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + COL_driverid + " TEXT,"
             + COL_duser + " TEXT,"
+            + COL_drtime + " date default CURRENT_TIMESTAMP, "
             + COL_dreview + " TEXT" + ")";
 
 
 
     public DatabaseHelper(@Nullable Context context) {
 
-        super(context, DATABASE_NAME, null, 1
+        super(context, DATABASE_NAME, null, 3
 
 
         );

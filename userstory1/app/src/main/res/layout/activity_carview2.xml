@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Carview2">
+    <include layout="@layout/appbar"/>
 
     <ListView
         android:id="@+id/carulist"
         android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
 
         android:layout_height="match_parent"
 

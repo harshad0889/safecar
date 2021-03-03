@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 public class griddriveritem extends AppCompatActivity {
 
-    TextView dvname,dvaddress,dvage,dvgender,dvprice,dvbadge,dvlocation,dvyoe,dvphno,dvemail,driverid,driver_review;
+    TextView dvname,dvaddress,dvage,dvgender,dvprice,dvbadge,dvlocation,dvyoe,dvphno,dvemail,driverid,driver_review,time;
     ImageView imgdriver;
     DatabaseHelper db;
     Button rentd,chat2;
@@ -25,10 +25,10 @@ public class griddriveritem extends AppCompatActivity {
     private ListView listView;
     private SimpleCursorAdapter adapter;
 
-    final String[] from = new String[]{db.COL_driverid,db.COL_duser,
+    final String[] from = new String[]{db.COL_driverid,db.COL_duser,db.COL_drtime,
             db.COL_dreview};
 
-    final int[] to = new int[]{R.id.driverid, R.id.duser, R.id.dreview};
+    final int[] to = new int[]{R.id.driverid, R.id.duser,R.id.drtime, R.id.dreview};
 
 
 
@@ -53,6 +53,7 @@ public class griddriveritem extends AppCompatActivity {
         driverid = findViewById(R.id.drivid);
         driver_review = findViewById(R.id.driver_review);
         chat2 = findViewById(R.id.chatd);
+        time = findViewById(R.id.drtime);
 
         Intent intent = getIntent();
         String sid = intent.getStringExtra("did");

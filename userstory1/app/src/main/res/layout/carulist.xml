@@ -2,6 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="@drawable/btn"
+    android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+    android:elevation="6dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -9,6 +13,7 @@
         android:layout_height="150dp"
         app:srcCompat="@drawable/car_foreground"
         android:id="@+id/uimgcar"
+        android:padding="5dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

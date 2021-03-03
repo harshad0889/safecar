@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
+    android:background="@drawable/listbgstyle"
     android:layout_height="wrap_content">
 
     <TextView
@@ -17,13 +18,31 @@
         android:layout_height="30dp"
         android:hint="user"
         android:id="@+id/user"
+        android:ems="8"
+        android:padding="2dp"
         android:layout_marginTop="45dp"
+        android:drawableLeft="@drawable/person2"
         android:textSize="18sp"
         android:textColor="@color/black"
         android:layout_marginStart="15dp"
         >
 
     </TextView>
+    <TextView
+        android:id="@+id/rtime"
+        android:layout_width="145dp"
+        android:layout_height="20dp"
+
+
+        android:layout_marginStart="153dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="-110dp"
+        android:drawableLeft="@drawable/time"
+
+        android:text="time"
+        android:textColor="#979494"
+        android:textSize="15sp" />
     <TextView
         android:layout_width="250dp"
         android:layout_height="50dp"

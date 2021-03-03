@@ -11,7 +11,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import androidx.appcompat.widget.Toolbar;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ public class Driverview2 extends AppCompatActivity {
     DatabaseHelper db;
     SharedPreferences su;
     String uid;
+    Toolbar tb;
 
 
     private ListView listView;
@@ -40,6 +43,12 @@ public class Driverview2 extends AppCompatActivity {
 
         su = getSharedPreferences("user_details",MODE_PRIVATE);
         uid = su.getString("uid",null);
+
+        tb = findViewById(R.id.appbar);
+        setSupportActionBar(tb);
+        ActionBar actionBar = getSupportActionBar();
+        // actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("UPDATE DRIVER");
 
         db = new DatabaseHelper(this);
         Cursor cursor = db.driverlist(uid);

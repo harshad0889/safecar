@@ -15,7 +15,7 @@
         android:layout_marginStart="15dp"
 
         android:layout_marginTop="29dp"
-
+        android:visibility="gone"
         android:text="Username"
         android:textAlignment="center"
         android:textColor="#403F3F"
@@ -28,74 +28,93 @@
 
         android:layout_marginStart="180dp"
         android:layout_marginTop="4dp"
-
+        android:visibility="gone"
 
         android:hint="did"
         android:textAlignment="center"
         android:textColor="#ce1309"
         android:textSize="17sp"
         />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginStart="35dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="-110dp"
+        android:text="DRIVER"
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:textColor="#101010"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/driver"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
 
-        android:layout_marginStart="153dp"
-
+        android:layout_marginStart="35dp"
+        android:drawableLeft="@drawable/person2"
         android:layout_marginTop="29dp"
         android:layout_marginRight="-110dp"
         android:text="driver"
+        android:fontFamily="sans-serif-condensed-medium"
         android:textAlignment="center"
         android:textColor="#101010"
-        android:textSize="27sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/time"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
 
-        android:layout_marginStart="283dp"
+        android:layout_marginStart="203dp"
 
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="-110dp"
         android:text="time"
+        android:drawableLeft="@drawable/time"
         android:textAlignment="center"
         android:textColor="#101010"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/locpick"
-        android:layout_width="91dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="35dp"
+        android:drawableLeft="@drawable/location"
         android:layout_marginTop="85dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="35dp"
         android:text="locpick"
 
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/locdrop"
-        android:layout_width="93dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="153dp"
+        android:drawableLeft="@drawable/location"
         android:layout_marginTop="85dp"
         android:layout_marginRight="28dp"
         android:text="locdrop"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="17sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/datepic"
-        android:layout_width="91dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="35dp"
@@ -103,26 +122,33 @@
         android:layout_marginRight="35dp"
         android:layout_marginBottom="35dp"
         android:text="datepick"
+        android:gravity="center_vertical"
+
+
+        android:drawableLeft="@drawable/cal"
 
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/datedrop"
-        android:layout_width="93dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="153dp"
         android:layout_marginTop="125dp"
         android:layout_marginRight="28dp"
         android:text="datedrop"
-        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/cal"
+
         android:textColor="@color/black"
-        android:textSize="17sp" />
+        android:textSize="15sp" />
     <TextView
         android:id="@+id/drivid"
         android:layout_width="115dp"
         android:layout_height="28dp"
+        android:visibility="gone"
 
         android:layout_marginStart="10dp"
         android:layout_marginTop="3dp"

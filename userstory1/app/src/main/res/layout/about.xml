@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+    <include layout="@layout/appbar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:text="SAFE CAR"
+        android:layout_marginStart="130dp"
+        android:textSize="35dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="#1B1A1A">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginRight="10dp"
+        android:text="SAFE CAR is an car rental application and also it provide renting drivers. So Travelers or customers doesn't want to search for cars and drivers. It is an user friendly platform for both  Customers and Agencies. Agencies can add cars and drivers. Customers can have location based searching for cars and drivers and they can rent and contact them."
+        android:textColor="#4E5352">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="510dp"
+        android:text="TRAVEL SAFE WITH US  :)"
+        android:layout_marginStart="60dp"
+        android:textAlignment="center"
+        android:textSize="25dp"
+
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#3940BD">
+
+    </TextView>
+
+</RelativeLayout>

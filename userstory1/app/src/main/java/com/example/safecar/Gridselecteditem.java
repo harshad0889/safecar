@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 
 public class Gridselecteditem extends AppCompatActivity {
-    TextView br,model,price,agency,kms,phone,location,email,carid,carreview;
+    TextView br,model,price,agency,kms,phone,location,email,carid,carreview,time;
     ImageView imgcar;
     DatabaseHelper db;
     Button rentc,chat1,chat2;
@@ -29,10 +29,10 @@ public class Gridselecteditem extends AppCompatActivity {
     private ListView listView;
     private SimpleCursorAdapter adapter;
 
-    final String[] from = new String[]{db.COL_carid,db.COL_user,
+    final String[] from = new String[]{db.COL_carid,db.COL_user,db.COL_rtime,
             db.COL_creview};
 
-    final int[] to = new int[]{R.id.carid, R.id.user, R.id.creview};
+    final int[] to = new int[]{R.id.carid, R.id.user,R.id.rtime, R.id.creview};
 
 
 
@@ -56,6 +56,7 @@ public class Gridselecteditem extends AppCompatActivity {
         carreview = findViewById(R.id.car_review);
         chat1 = findViewById(R.id.chat);
         tb = findViewById(R.id.appbar);
+        time = (TextView)findViewById(R.id.rtime);
 
 
 
